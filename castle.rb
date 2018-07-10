@@ -1,4 +1,6 @@
 require_relative 'player.rb'
+require_relative 'pack.rb'
+require_relative 'broom.rb'
 
 class Castle
   # where the main game lives
@@ -6,6 +8,7 @@ class Castle
     name = self.new_player
     @player = Player.new(name)
     @alive = true
+    self.setup
     self.main
   end
 
@@ -31,6 +34,12 @@ class Castle
       end
     end
     puts "game over"
+  end
+
+  def setup
+    # adds things to the pack and adjusts anything for the player - right now a broom
+    broom = Broom.new
+    @player.pack.items.push(broom)
   end
 
 end
