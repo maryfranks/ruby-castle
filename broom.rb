@@ -1,0 +1,3 @@
+class Broom < Weapon
+
+end
