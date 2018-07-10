@@ -1,0 +1,18 @@
+1. you see the castle (app.rb - makes new castle)
+2. Welcome to the castle (castle.rb - makes a new player)
+3. You come in the front door
+4. you're in the castle ENTRY WAY
+5. you look around the room (prompt: do you want to look around)
+6. you find a broom (equip the broom so you're holding it when...)
+7. something startles you and you go to leave
+8. you realize you're locked in
+9. you check your supplies (examine pack)
+10. you find two snacks in your pack
+11. you look around the room again in case you missed something
+12. you find a clue - you have to go through the castle to get out
+13. you see a large set of doors in front of you and you go through them
+14. you're in the GRAND HALL
+15. look around (prompt - first thing to do is look around)
+16. you find a dead body with a sword plus other things (helmet maybe)
+17. you take the things in case you need them
+18.
