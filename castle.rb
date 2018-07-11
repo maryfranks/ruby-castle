@@ -13,10 +13,11 @@ class Castle
   end
 
   def new_player
-    puts "What is your name"
+
+    puts "You cross the drawbridge. Something ominous. You find a jacket. The jacket is ripped. You look more closely. The name tag is the same a your name. What does it say?"
+
     name = gets.chomp
-    puts "Hello #{name}"
-    return name
+
   end
 
   def main
