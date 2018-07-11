@@ -7,11 +7,16 @@ class App
   answer = gets.chomp
 
   if answer == "yes"
+
     castle = Castle.new
+
   elsif answer == "no"
+
     puts "The castle creeps you out. You turn and head for home, looking back over your shoulder at the creepy castle. You feel like it's calling you, beckoning you to enter. You can't help but sense danger. Thunder booms, closer this time. The thunder is so loud you don't hear the car. You trip over a root that has buckled the sidewalk. You think to yourself, 'Was there always a tree here?' as you fall on your face in the street. The driver of the car was playing with the GPS and didn't see you. As the Tesla drives over you, the driver exclaims 'this autopilot sucks'. You appreciate the irony of being run over by a smart car. You think to yourself 'I should have gone into the castle.' That is your last thought. You die alone in the road in front of the castle you still swear wasn't there the day before."
   else
+
     puts "A voice booms in the distance. 'Arrays start at 0,' the vortex reminds you. You realize it's a nightmare. You always have this nightmare. The zero index of the array descends upon you. Inside is a horror that only the residents of Dunwich could understand. Your mouth opens in a scream, it is the zero index of the array. "
+
   end
 
 end
