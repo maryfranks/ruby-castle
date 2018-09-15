@@ -14,4 +14,11 @@ class Player
     @pack = Pack.new
   end
 
+  HEALTH_INCREASE = 5
+
+  def level_up(player)
+    @health += HEALTH_INCREASE
+    @level += 1
+  end
+
 end
