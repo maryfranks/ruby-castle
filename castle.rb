@@ -41,7 +41,7 @@ class Castle
 
   def setup
     snack = Snack.new
-    @player.pack.items.push(snack)
+    @player.pack.add_item(snack)
   end
 
   def look_around(room_type) # jason thinks I should put this shit in player
@@ -49,7 +49,7 @@ class Castle
       puts "Start by looking in your pack. You might have something good in there. There is #{@player.pack.items.count} items in your pack."
       puts "You find a broom."
       broom = Broom.new
-      @player.pack.items.push(broom)
+      @player.pack.add_item(broom)
       puts "there is #{@player.pack.items.count} items in your pack"
     end
   end
