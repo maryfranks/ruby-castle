@@ -21,4 +21,8 @@ class Player
     @level += 1
   end
 
+  def examine_pack
+    @pack.list_items
+  end
+
 end

@@ -10,4 +10,8 @@ class Snack
 
   end
 
+  def describe_item
+    puts "You have 1 #{self.name}: #{self.description}."
+  end
+
 end

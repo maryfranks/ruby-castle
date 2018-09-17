@@ -1,3 +1,4 @@
+require_relative 'snack.rb'
 class Pack
 
   attr_accessor :pack_size, :items
@@ -17,6 +18,12 @@ class Pack
 
   def remove_item(item)
     @items.delete(item)
+  end
+
+  def list_items
+    @items.each do | item |
+      item.describe_item
+    end
   end
 
 end

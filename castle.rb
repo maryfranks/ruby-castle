@@ -14,11 +14,8 @@ class Castle
   end
 
   def new_player
-
     puts "You cross the drawbridge. The castle looks like something out of a horror movie but the thunder and lightening are getting closer. Now that you think about it, the storm seem ominous. Halfway across the drawbridge you see a sign that says 'free candy'.  You figure, if they're giving out free candy how bad could it be.  Maybe you just forgot it was halloween? Is it halloween you ask yourself?  After all you somehow missed the giant castle in the vacant lot. Halloween is really the best explanation...the castle must be a new haunted house. Now you're excited for the adventure, although is pretty sure it's April. Wasn't it April 5th when you left work half a hour ago? The time for reasonable thinking has passed. You're at the castle door. As you approach, the door opens on it own and you're greeted by a cool, if slightly foul smelling, breeze. 'This haunted house is awesome you think' as you walk into the dark entryway. To the left of the door is a quaint little table with a guest book. It's like a haunted bed and breakfast! How clever. The guest book is splattered with what you're going to assume is red wine. For a haunted castle house that you didn't even know was there, there are a lot of names in this guest book. You decide to add yours. You write:"
-
     name = gets.chomp
-
   end
 
   def main
@@ -40,17 +37,20 @@ class Castle
   end
 
   def setup
-    snack = Snack.new
-    @player.pack.add_item(snack)
+    2.times do
+      snack = Snack.new
+      @player.pack.add_item(snack)
+    end
   end
 
   def look_around(room_type) # jason thinks I should put this shit in player
-    if room_type = "entryway"
-      puts "Start by looking in your pack. You might have something good in there. There is #{@player.pack.items.count} items in your pack."
+    if room_type == "entryway"
+      puts "Start by looking in your pack. You might have something good in there."
+      @player.examine_pack
       puts "You find a broom."
       broom = Broom.new
       @player.pack.add_item(broom)
-      puts "there is #{@player.pack.items.count} items in your pack"
+      @player.examine_pack
     end
   end
 
