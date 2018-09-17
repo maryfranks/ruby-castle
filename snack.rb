@@ -4,8 +4,6 @@ class Snack
 
   def initialize
 
-    super
-
     @name = "snack"
     @strength = 1
     @description = "A small packet of nuts."
