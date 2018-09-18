@@ -1,18 +1,22 @@
 | x | 1. you see the castle (app.rb - makes new castle)
-| | 2. Welcome to the castle (castle.rb - makes a new player)
-| | 3. You come in the front door
-| | 4. you're in the castle ENTRY WAY
-| | 5. you look around the room (prompt: do you want to look around)
+| x | 2. Welcome to the castle (castle.rb - makes a new player)
+| x | 3. You come in the front door
+| x | 4. you're in the castle ENTRY WAY
+| x | 5. you look around the room (prompt: do you want to look around)
 | | 6. you find a broom (equip the broom so you're holding it when...)
-| | 7. something startles you and you go to leave
-| | 8. you realize you're locked in
-| | 9. you check your supplies (examine pack)
-| | 10. you find two snacks in your pack
+| x | 7. something startles you and you go to leave
+| x | 8. you realize you're locked in
+| x | 9. you check your supplies (examine pack)
+| x | 10. you find two snacks in your pack
 | | 11. you look around the room again in case you missed something
 | | 12. you find a clue - you have to go through the castle to get out
 | | 13. you see a large set of doors in front of you and you go through them
 | | 14. you're in the GRAND HALL
 | | 15. look around (prompt - first thing to do is look around)
-| | 16. you find a dead body with a sword plus other things (helmet maybe)
+| | 16. you find a dead body with a baseball bat plus other things (helmet maybe - pocketknife to pick locks)
 | | 17. you take the things in case you need them
 | | 18.
+
+* I need to equip the broom
+* weapon should maybe be item with weapon as a type? then you can use it in combat. Otherwise you can equip tools to pick locks or whatever.
+* I will need a room class with an array of things to find. I will probably need a dead body class too so I can find things.
