@@ -22,22 +22,8 @@ class Castle
   def main
     self.explore_entryway
     # main game loop
-    puts "It's always a good idea to keep looking around to make sure you've found everything there is to find, but hey, I can't make you do anything. You have endless amounts of options, being trapped in a creepy castle. If you want to look around again, type 'look around'. If you want to see what other options are available, type 'main menu'."
     while @alive == true
-      puts "What would you like to try next?"
-      choice = gets.chomp
-      # this method needs to deal with all menu options.
-      if choice == "main menu"
-        print_main_menu
-      elsif choice == "look around"
-        puts "The castle is scary"
-      elsif choice == "instructions"
-        print_instructions
-      elsif choice == "give up"
-        @alive = false
-      else
-        main_menu
-      end
+      risk_your_life
     end
     puts "game over"
   end
@@ -64,6 +50,10 @@ class Castle
       look_around("entryway")
       @player.examine_pack
     end
+    puts "It's always a good idea to keep looking around to make sure you've found everything there is to find, but hey, I can't make you do anything. You have endless amounts of options, being trapped in a creepy castle. If you want to look around again, type 'look around'. If you want to see what other options are available, type 'main menu'."
+    while @player.level == 0
+      risk_your_life
+    end 
   end
 
   def look_around(room_type) # jason thinks I should put this shit in player
@@ -83,6 +73,22 @@ class Castle
 
   def print_instructions
     puts "Oh, I don't know...maybe get out of this creepy castle?"
+  end
+
+  def risk_your_life
+    puts "What would you like to try next?"
+    choice = gets.chomp
+    if choice == "main menu"
+      print_main_menu
+    elsif choice == "look around"
+      puts "The castle is scary"
+    elsif choice == "instructions"
+      print_instructions
+    elsif choice == "give up"
+      @alive = false
+    else
+      main_menu
+    end
   end
 
 
