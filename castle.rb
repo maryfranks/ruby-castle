@@ -9,7 +9,7 @@ class Castle
     name = self.new_player
     @player = Player.new(name)
     @alive = true
-    @main_menu = ["look around", "main menu", "give up"]
+    @main_menu = ["look around", "main menu", "give up", "instructions"]
     self.setup
     self.main
   end
@@ -20,19 +20,19 @@ class Castle
   end
 
   def main
-    self.entryway
+    self.explore_entryway
     # main game loop
     puts "It's always a good idea to keep looking around to make sure you've found everything there is to find, but hey, I can't make you do anything. You have endless amounts of options, being trapped in a creepy castle. If you want to look around again, type 'look around'. If you want to see what other options are available, type 'main menu'."
     while @alive == true
-      "What would you like to try next?"
+      puts "What would you like to try next?"
       choice = gets.chomp
       # this method needs to deal with all menu options.
       if choice == "main menu"
-        main_menu
+        print_main_menu
       elsif choice == "look around"
         puts "The castle is scary"
       elsif choice == "instructions"
-        instructions
+        print_instructions
       elsif choice == "give up"
         @alive = false
       else
@@ -49,7 +49,7 @@ class Castle
     end
   end
 
-  def entryway
+  def explore_entryway
     puts "As soon as you put the pen down you swear you hear a voice, it sounds like it's saying 'murder', but murder what? You take a step closer to the sound and you hear clearly - 'run #{@player.name}, before it's too late!' Something about the voice convinces you it isn't a haunted house after all. You turn to leave but the door is closed. It won't open, there isn't even a doorknob. What kind of asshole ghost warns you to leave after it's too late? Maybe it even closed the door on you. At any rate, you appear to be trapped, you might as well look around right? (yes/no)"
     answer = gets.chomp
     if answer == "yes"
@@ -77,11 +77,11 @@ class Castle
     end
   end
 
-  def main_menu
+  def print_main_menu
     puts "these are your options: #{@main_menu}"
   end
 
-  def instructions
+  def print_instructions
     puts "Oh, I don't know...maybe get out of this creepy castle?"
   end
 
