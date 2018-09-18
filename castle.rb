@@ -20,8 +20,8 @@ class Castle
 
   def main
     self.entryway
-    self.instructions
     # main game loop
+    self.instructions
     while @alive == true
       puts "what do you want to do? stay or go home"
       choice = gets.chomp
@@ -56,6 +56,7 @@ class Castle
     else
       puts "Your lack of basic comprehension makes me dubious that you'll survive the adventure. Luckily there's nothing in the room to kill you - you'd already be dead considering that you went staight to the guest book to sign in. Even the slowest of deaths would have had time to find you. You're going to look around now, and you should always look around when you enter a new room."
       look_around("entryway")
+      @player.examine_pack
     end
   end
 
