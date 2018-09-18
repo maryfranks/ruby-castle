@@ -9,6 +9,7 @@ class Castle
     name = self.new_player
     @player = Player.new(name)
     @alive = true
+    @main_menu = ["look around", "main menu", "give up"]
     self.setup
     self.main
   end
@@ -21,16 +22,21 @@ class Castle
   def main
     self.entryway
     # main game loop
-    self.instructions
+    puts "It's always a good idea to keep looking around to make sure you've found everything there is to find, but hey, I can't make you do anything. You have endless amounts of options, being trapped in a creepy castle. If you want to look around again, type 'look around'. If you want to see what other options are available, type 'main menu'."
     while @alive == true
-      puts "what do you want to do? stay or go home"
+      "What would you like to try next?"
       choice = gets.chomp
-      if choice == "stay"
+      # this method needs to deal with all menu options.
+      if choice == "main menu"
+        main_menu
+      elsif choice == "look around"
         puts "The castle is scary"
-      elsif choice == "go home"
+      elsif choice == "instructions"
+        instructions
+      elsif choice == "give up"
         @alive = false
       else
-        puts "You have two choices, stay or go home"
+        main_menu
       end
     end
     puts "game over"
@@ -72,11 +78,11 @@ class Castle
   end
 
   def main_menu
-    puts "these are your options: look around, "
+    puts "these are your options: #{@main_menu}"
   end
 
   def instructions
-    puts "game instructions should go here and you should be able to get back to them from the main menu"
+    puts "Oh, I don't know...maybe get out of this creepy castle?"
   end
 
 
